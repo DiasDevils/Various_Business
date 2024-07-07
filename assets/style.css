@@ -32,10 +32,19 @@ header {
     left: 0;
     width: 100%;
     z-index: 1000;
+    /* from here */
+    display: flex;
+    justify-content: space-evenly;
+    /* Center align items horizontally */
+    list-style-type: none;
+    /* Remove default list styles */
+    padding: 0;
+    /* Remove default padding */
+    border: 4px solid rgb(134, 103, 4);
 }
 
 nav {
-    border: 4px solid rgb(134, 103, 4);
+    /* border: 4px solid rgb(134, 103, 4); */
 }
 
 nav ul {
@@ -175,27 +184,31 @@ footer {
 
 /*CONTENT*/
 .con {
-    display: flex; /* Use flexbox */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    height: 100vh; /* Full viewport height */
+    display: flex;
+    /* Use flexbox */
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    height: 100vh;
+    /* Full viewport height */
 }
 
 .contact {
     background: url('../images/wall3-pexels-kseniachernaya-3965514.jpg') no-repeat center/cover;
     /* Handles responsivity without the need for a media query */
     /* display: flex; */
-    flex-wrap: wrap;  
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin:0px;
+    flex-wrap: wrap;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0px;
 }
 
 
 #h1contact {
     color: rgb(134, 103, 4);
-   
+
 }
 
 .contact-row {
@@ -236,34 +249,39 @@ footer {
         width: 100%;
         /* Full width on smaller screens */
     }
+
     .contact-item {
         width: 100%;
         /* Full width on smaller screens */
     }
+
     .about-item {
         width: 100%;
         /* Full width on smaller screens */
     }
-    
+
 }
 
 
-@media screen and (min-width: 1200px) {    
-    
+@media screen and (min-width: 1200px) {
+
     .contact {
         background: url('../images/wall3-pexels-kseniachernaya-3965514.jpg') no-repeat center/cover;
         width: 100%;
         height: 100%;
         margin-right: 0%;
     }
+
     .contact-item {
         width: calc(50% - 20px);
-        left:50vh;
+        left: 50vh;
     }
 
-     #h1contact {
-    display: flex; /* Use flexbox */
-    justify-content: center;
-    position:center;}
-    
+    #h1contact {
+        display: flex;
+        /* Use flexbox */
+        justify-content: center;
+        position: center;
+    }
+
 }
