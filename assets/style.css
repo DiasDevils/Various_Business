@@ -11,6 +11,7 @@
 h1 {
     text-align: center;
     color: rgb(132, 96, 6);
+    margin-top: 50px;
 }
 
 /* Main Body Style */
@@ -155,6 +156,7 @@ footer {
 }
 
 #h1about {
+    margin:50px;
     color: rgb(134, 103, 4);
 }
 
@@ -208,6 +210,7 @@ footer {
 
 #h1contact {
     color: rgb(134, 103, 4);
+    margin:50px;
 
 }
 
