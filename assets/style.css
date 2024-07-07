@@ -13,7 +13,11 @@
 
 .one-col {
     width: 100%;
-    outline: 1px solid rgb(128, 99, 4); /* Added 'solid' for the border to show */
+    /* outline: 1px solid rgb(128, 99, 4); Added 'solid' for the border to show */
+}
+
+.two-col {
+    width: 50%;
 }
 
 .row {
@@ -62,18 +66,8 @@ body {
     margin: 0; /* Remove default body margin */
 }
 
-/* Responsive design: Collapse menu on smaller screens */
-@media (max-width: 600px) {
-    nav ul {
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center items horizontally */
-    }
-
-    nav ul li {
-        padding: 10px 0; /* Adjust padding for vertical layout */
-        width: 100%; /* Make list items take full width */
-        text-align: center; /* Center text within list items */
-    }
+.par{
+    color: rgb(128, 99, 4);
 }
 
 /* Footer styles */
@@ -86,4 +80,18 @@ footer {
     bottom: 0; /* Align to the bottom */
     width: 100%; /* Ensure it spans the full width */
     z-index: 1000; /* Ensure it appears above other content */
+}
+
+/* Responsive design: Collapse menu on smaller screens */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+    }
+
+    nav ul li {
+        padding: 10px 0; /* Adjust padding for vertical layout */
+        width: 100%; /* Make list items take full width */
+        text-align: center; /* Center text within list items */
+    }
 }
