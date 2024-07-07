@@ -1,97 +1,269 @@
+/* Remove default */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Add this for consistent box sizing */
+    box-sizing: border-box;
+    /* align-content: space-around; */
+    /* row-gap: 10px; */
 }
 
-/* grid layout */
-.container {
+/* Main header */
+h1 {
+    text-align: center;
+    color: rgb(132, 96, 6);
+}
+
+/* Main Body Style */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: blanchedalmond;
+    padding-top: 50px;
+    color: rgb(132, 96, 6);
+}
+
+/* navbar header style */
+header {
+    background-color: #15695e;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav {
+    border: 4px solid rgb(134, 103, 4);
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.active {
+    border-bottom: 1px solid #fff;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/* Main Content */
+main {
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.content-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.content-item {
+    width: calc(50% - 20px);
+    margin: 10px;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #cac399;
+    box-shadow: 0 0 10px rgba(173, 160, 97, 0.491);
+    text-align: center;
+}
+
+.content-item img {
+    max-width: 100%;
+    height: auto;
     display: block;
+    margin: 0 auto 10px;
+}
+
+.content-item>p {
+    text-align: justify;
+    /* Justify text */
+    text-justify: distribute-all-lines;
+}
+
+/* Footer */
+footer {
+    background-color: #15695e;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
     width: 100%;
-    margin-top: 64px; /* Adjust to the height of your nav bar */
+    z-index: 1000;
+    /* border-top: 4px solid rgb(134, 103, 4); */
+    border: 4px solid rgb(134, 103, 4);
 }
 
-.one-col {
-    width: 100%;
-    /* outline: 1px solid rgb(128, 99, 4); Added 'solid' for the border to show */
+/* Social networks styling */
+#social-networks {
+    display: flex;
+    justify-content: space-evenly;
+    /* Center align items horizontally */
+    list-style-type: none;
+    /* Remove default list styles */
+    padding: 0;
+    /* Remove default padding */
+
 }
 
-.two-col {
-    width: 50%;
+#social-networks li {
+    margin: 0 10px;
+    /* Adjust margin between items */
 }
 
-.row {
+#social-networks li a {
+    color: #fff;
+    /* Set icon color to black */
+    font-size: 24px;
+    /* Adjust icon size */
+}
+
+
+/*ABOUT PAGE */
+.about {
+    background: url('../images/wall3-pexels-kseniachernaya-3965514.jpg') no-repeat center/cover;
+    /* Handles responsivity without the need for a media query */
     display: flex;
     flex-wrap: wrap;
 }
 
-.text-center {
-    text-align: center;
-    font-size: large;
-    color: rgb(128, 99, 4);
+#h1about {
+    color: rgb(134, 103, 4);
 }
 
-nav {
-    background-color: #2b685e; /* Set background color of the nav bar */
-    border-bottom: 4px solid rgb(128, 99, 4); /* Add bottom border with the specified color */
-    position: fixed; /* Keep the nav bar fixed at the top */
-    top: 0; /* Position the nav bar at the very top */
-    left: 0; /* Position the nav bar at the very left */
-    width: 100%; /* Make the nav bar span the full width of the viewport */
-    z-index: 1000; /* Ensure the nav bar is on top of other content */
-}
-
-nav ul {
-    display: flex; /* Use flexbox to lay out the list items */
-    justify-content: space-around; /* Space items evenly across the container */
-    list-style-type: none; /* Remove bullet points */
-    padding: 10px; /* Add some padding to the ul */
-}
-
-nav ul li {
-    color: white; /* Set text color to white for visibility */
-    padding: 10px; /* Add padding to list items */
-    font-size: 18px; /* Increase the font size */
-    font-weight: bold; /* Make the text bold */
-}
-
-main {
-    flex: 1; /* Grow to fill the available space */
-}
-
-body {
+.about-row {
     display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Ensure body height covers full viewport */
-    margin: 0; /* Remove default body margin */
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
-.par{
-    color: rgb(128, 99, 4);
-}
-
-/* Footer styles */
-footer {
-    background-color: #2b685e;
-    color: white;
+.about-item {
+    width: calc(50% - 20px);
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #cac399;
+    box-shadow: 0 0 10px rgba(173, 160, 97, 0.491);
     text-align: center;
-    padding: 10px;
-    position: fixed; /* Fix the footer to the bottom of the viewport */
-    bottom: 0; /* Align to the bottom */
-    width: 100%; /* Ensure it spans the full width */
-    z-index: 1000; /* Ensure it appears above other content */
 }
 
-/* Responsive design: Collapse menu on smaller screens */
-@media (max-width: 600px) {
+.about-item>p {
+    text-align: justify;
+    /* Justify text */
+    text-justify: distribute-all-lines;
+    color: rgb(134, 103, 4);
+    font-weight: bolder;
+}
+
+
+/*CONTENT*/
+.con {
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+}
+
+.contact {
+    background: url('../images/wall3-pexels-kseniachernaya-3965514.jpg') no-repeat center/cover;
+    /* Handles responsivity without the need for a media query */
+    /* display: flex; */
+    flex-wrap: wrap;  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin:0px;
+}
+
+
+#h1contact {
+    color: rgb(134, 103, 4);
+   
+}
+
+.contact-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.contact-item {
+    width: calc(50% - 20px);
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #cac399;
+    box-shadow: 0 0 10px rgba(173, 160, 97, 0.491);
+    text-align: center;
+}
+
+.contact-item>p {
+    text-align: center;
+    /* Justify text */
+    text-justify: distribute-all-lines;
+    color: rgb(134, 103, 4);
+    font-weight: bolder;
+}
+
+
+@media (max-width: 768px) {
     nav ul {
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center items horizontally */
+        display: block;
     }
 
     nav ul li {
-        padding: 10px 0; /* Adjust padding for vertical layout */
-        width: 100%; /* Make list items take full width */
-        text-align: center; /* Center text within list items */
+        display: block;
+        margin-bottom: 10px;
     }
+
+    .content-item {
+        width: 100%;
+        /* Full width on smaller screens */
+    }
+    .contact-item {
+        width: 100%;
+        /* Full width on smaller screens */
+    }
+    .about-item {
+        width: 100%;
+        /* Full width on smaller screens */
+    }
+    
+}
+
+
+@media screen and (min-width: 1200px) {    
+    
+    .contact {
+        background: url('../images/wall3-pexels-kseniachernaya-3965514.jpg') no-repeat center/cover;
+        width: 100%;
+        height: 100%;
+        margin-right: 0%;
+    }
+    .contact-item {
+        width: calc(50% - 20px);
+        left:50vh;
+    }
+
+     #h1contact {
+    display: flex; /* Use flexbox */
+    justify-content: center;
+    position:center;}
+    
 }
